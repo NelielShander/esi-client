@@ -12,7 +12,7 @@ module EveClient
 
     def initialize
       @client_id = ::EveClient.configuration.client_id
-      @code_verifier = code_verifier
+      @code_verifier = SecureRandom.hex(32)
     end
 
     def eve_sso_link
@@ -56,10 +56,6 @@ module EveClient
     end
 
     private
-
-    def code_verifier
-      SecureRandom.hex(32)
-    end
 
     def code_challenge(code_verifier)
       Base64.urlsafe_encode64(
