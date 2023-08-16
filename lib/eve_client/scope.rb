@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'scope/scope_base'
 require_relative 'scope/alliances'
 require_relative 'scope/assets'
 require_relative 'scope/bookmarks'
