@@ -2,10 +2,10 @@
 
 module EveClient
   module Scope
-    class Alliances < ScopeBase
+    class Alliances
 
       def read_contacts
-
+        'esi-alliances.read_contacts.v1'
       end
     end
   end

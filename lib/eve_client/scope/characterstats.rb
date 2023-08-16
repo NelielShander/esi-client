@@ -2,10 +2,10 @@
 
 module EveClient
   module Scope
-    class Characterstats < ScopeBase
+    class Characterstats
 
       def read
-
+        'esi-characterstats.read.v1'
       end
     end
   end

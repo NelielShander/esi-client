@@ -2,10 +2,10 @@
 
 module EveClient
   module Scope
-    class PublicData < ScopeBase
+    class PublicData
 
       def read
-
+        'publicData'
       end
     end
   end

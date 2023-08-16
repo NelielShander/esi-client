@@ -2,10 +2,10 @@
 
 module EveClient
   module Scope
-    class Search < ScopeBase
+    class Search
 
       def search_structures
-
+        'esi-search.search_structures.v1'
       end
     end
   end

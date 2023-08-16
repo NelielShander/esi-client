@@ -2,10 +2,10 @@
 
 module EveClient
   module Scope
-    class Universe < ScopeBase
+    class Universe
 
       def read_structures
-
+        'esi-universe.read_structures.v1'
       end
     end
   end
