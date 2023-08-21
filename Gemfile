@@ -2,4 +2,9 @@
 
 source "https://rubygems.org"
 
-gem 'jwt'
+gem "jwt"
+
+group :development, :test do
+  gem "rubocop"
+  gem "standard"
+end
