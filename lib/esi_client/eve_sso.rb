@@ -65,7 +65,7 @@ module EsiClient
     private
 
     def code_challenge
-      #noinspection RubyResolve
+      # noinspection RubyResolve
       OpenSSL::Digest::SHA256
         .digest(code_verifier)
         .then { |digest| Base64.urlsafe_encode64(digest) }

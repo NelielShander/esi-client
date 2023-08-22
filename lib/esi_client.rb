@@ -39,7 +39,7 @@ module EsiClient
     eve_sso.jwt_token = jwt_token
     eve_sso.refresh_token = refresh_token
 
-    decode_payload jwt_token['access_token']
+    decode_payload jwt_token["access_token"]
   end
 
   def extract_code(url_string)
@@ -52,15 +52,5 @@ module EsiClient
 
   def decode_payload(access_token = "")
     JWT.decode access_token, nil, false, {algorithm: "RS256"}
-  end
-
-  def get_request(path, token = nil)
-    uri = URI.join("https://esi.evetech.net/latest/", path)
-    uri.query = URI.encode_www_form({datasource: "tranquility"})
-    headers = {accept: "application/json", "cache-control": "no-cache"}
-    headers.merge! authorization: "Bearer #{token}" if token
-
-    response = Net::HTTP.get_response(uri, **headers)
-    JSON.parse response.body
   end
 end
