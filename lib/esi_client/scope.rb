@@ -1,5 +1,5 @@
 module EsiClient
-  module ScopeData
+  module Scope
     DATA = {
       "publicData" => [],
       "esi-calendar.respond_calendar_events.v1" => [],
@@ -60,7 +60,7 @@ module EsiClient
       "esi-corporations.read_starbases.v1" => [],
       "esi-industry.read_corporation_jobs.v1" => [],
       "esi-markets.read_corporation_orders.v1" => [],
-      "esi-corporations.read_container_logs.v1" => [],
+      "esi-corporations.read_container_logs.v1" => ["/corporations/{corporation_id}/containers/logs/"],
       "esi-industry.read_character_mining.v1" => [],
       "esi-industry.read_corporation_mining.v1" => [],
       "esi-planets.read_customs_offices.v1" => [],

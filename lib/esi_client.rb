@@ -6,7 +6,7 @@ require "jwt"
 
 require_relative "esi_client/version"
 require_relative "esi_client/configuration"
-require_relative "esi_client/scope_data"
+require_relative "esi_client/scope"
 require_relative "esi_client/eve_sso"
 
 module EsiClient
@@ -15,13 +15,13 @@ module EsiClient
   extend Configuration
 
   def request
-    scopes = ScopeData::DATA.keys.take(1).join(" ")
+    scopes = Scope::DATA.keys.take(1).join(" ")
     eve_sso = EveSso.instance
 
     puts "redirect to authorize > #{eve_sso.authorize_link(scopes)}"
     print "paste browser link > "
 
-    browser_link = gets.strip
+    browser_link = STDIN.gets.strip
     authorization_code = extract_code(browser_link)
     eve_sso.code = authorization_code
 
