@@ -28,10 +28,8 @@ module EsiClient
     puts "your code is '#{authorization_code}'"
 
     jwt_token = eve_sso.post_authorization_code
-
-    token_type = jwt_token["token_type"]
-    refresh_token = jwt_token["refresh_token"]
-
+    jwt_token.symbolize_keys => { token_type:, refresh_token: }
+    
     puts "your token_type is '#{token_type}'"
     puts "your token expires_in #{jwt_token["expires_in"]} seconds"
     puts "your refresh_token '#{refresh_token}'"
