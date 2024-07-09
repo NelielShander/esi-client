@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "configuration/container"
+require_relative 'configuration/container'
 
 module EsiClient
   module Configuration

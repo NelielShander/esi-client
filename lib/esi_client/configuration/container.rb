@@ -3,9 +3,9 @@
 module EsiClient
   module Configuration
     class Container
-      CLIENT_ID = "df1396ccd7ef4997892e41378aa5c779"
-      SECRET_KEY = "Rg6OqK55Zd8COrSySH6NwEDIjWpxYafTxpBAycGS"
-      CALLBACK_URL = "https://localhost/callback"
+      CLIENT_ID = 'df1396ccd7ef4997892e41378aa5c779'
+      SECRET_KEY = 'Rg6OqK55Zd8COrSySH6NwEDIjWpxYafTxpBAycGS'
+      CALLBACK_URL = 'https://localhost/callback'
 
       attr_accessor :client_id, :secret_key, :redirect_uri
 

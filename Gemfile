@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jwt"
+gem 'jwt'
 
 group :development, :test do
-  gem "rubocop"
-  gem "standard"
+  gem 'rubocop'
+  gem 'standard'
 end
