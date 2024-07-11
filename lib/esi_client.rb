@@ -21,7 +21,7 @@ module EsiClient
     puts "redirect to authorize > #{eve_sso.authorize_link(scopes)}"
     print 'paste browser link > '
 
-    browser_link = $stdin.gets.strip
+    browser_link = $stdin.gets&.strip
     authorization_code = extract_code(browser_link)
     eve_sso.code = authorization_code
 
